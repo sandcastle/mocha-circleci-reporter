@@ -54,7 +54,7 @@ require a format such as [jUnit XML](https://windyroad.com.au/dl/Open%20Source/J
 as a lot of the goodness that is written to console when running the default
 reporter (`Spec`). 
 
-To overcome this, the `mocha-circleci-reporter` report combines both the 
+To overcome this, we combine the output of both the 
 builtin `Spec` and `mocha-junit-report` reporters.
 
 Example spec output:
