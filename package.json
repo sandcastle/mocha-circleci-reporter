@@ -1,7 +1,7 @@
 {
   "name": "mocha-circleci-reporter",
   "version": "0.0.1",
-  "description": "A mocha reporter that supports Cicle CI, via a combined jUnit and Spec reporter output.",
+  "description": "A mocha reporter that supports Circle CI, via a combined jUnit and Spec reporter output.",
   "main": "index.js",
   "scripts": {
     "test": "node_modules/.bin/mocha --harmony test/index.js"
