@@ -38,6 +38,15 @@ reporter (`Spec`).
 To overcome this, the `mocha-circleci-reporter` report combines both the 
 builtin `Spec` and `mocha-junit-report` reporters.
 
+Example spec output:
+
+![spec_output.jpg](docs/images/spec_output.jpg)
+
+Example jUnit output:
+
+![spec_output.jpg](docs/images/junit_output.jpg)
+
+
 ### Mocha 3.x
 
 There is work underway in Mocha 3.x to move to a plugin architecture that would

@@ -1,5 +1,5 @@
 'use-strict';
-/* global describe, it, beforeEach */
+/* global describe, it, beforeEach, afterEach */
 
 var Reporter = require('../index');
 var Runner = require('./helpers/mock-runner');
@@ -12,10 +12,15 @@ var fs = require('fs');
 describe('mocha-circleci-reporter', function() {
     
     var runner;
+    var file = './test/output/console.xml';
     
     beforeEach(function() {
         runner = new Runner();
     });
+    
+    afterEach(function(){
+        fs.unlinkSync(file);
+    })
     
     it('should output spec to stdout', function() {
         
@@ -44,9 +49,7 @@ describe('mocha-circleci-reporter', function() {
         try{
           executeTestRunner();
           
-          var file = './test/output/console.xml';
           assert(fs.existsSync(file));
-          fs.unlinkSync(file);
         }
         finally{            
           stdout.restore();
