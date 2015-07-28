@@ -1,0 +1,33 @@
+{
+  "name": "mocha-circleci-reporter",
+  "version": "0.0.1",
+  "description": "A mocha reporter that supports Cicle CI, via a combined jUnit and Spec reporter output.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --harmony test/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandcastle/mocha-circleci-reporter.git"
+  },
+  "keywords": [
+    "mocha",
+    "reporter",
+    "ci",
+    "circle",
+    "ci",
+    "build",
+    "js",
+    "javascript"
+  ],
+  "author": "Glenn Morton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sandcastle/mocha-circleci-reporter/issues"
+  },
+  "homepage": "https://github.com/sandcastle/mocha-circleci-reporter#readme",
+  "devDependencies": {
+    "assert": "^1.3.0",
+    "mocha": "^2.2.5"
+  }
+}
