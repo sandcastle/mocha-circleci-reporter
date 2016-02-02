@@ -24,6 +24,25 @@ Update your `package.json` to use the reporter when running Mocha:
 }
 ```
 
+[mocha-junit-reporter](https://github.com/michaelleeallen/mocha-junit-reporter#usage) will output
+results to `test-results.xml` by default. CircleCI needs the results in the `$CIRCLE_TEST_REPORTS` directory.
+
+Either update your `circle.yml` to copy over the `test-results.xml:
+
+```yaml
+test:
+  override:
+    - npm run test
+    - if [[ -e test-results.xml ]]; then cp test-results.xml $CIRCLE_TEST_REPORTS/test-results.xml; fi
+```
+
+or set the `$MOCHA_FILE`:
+
+```yaml
+machine:
+  environment:
+      MOCHA_FILE: "$CIRCLE_TEST_REPORTS/test-results.xml"
+```
 
 ## Background
 
