@@ -1,15 +1,17 @@
-'use strict';
+"use strict"
 
 function Test(fullTitle, title, duration) {
-  
-  this.title = title;
-  this.duration = duration;
-  
-  this.fullTitle = function() { 
-    return fullTitle; 
-  };
-  
-  this.slow = function() { };
+  return {
+    title: title,
+    duration: duration,
+    fullTitle: function() {
+      return fullTitle
+    },
+    titlePath: function() {
+      return [fullTitle]
+    },
+    slow: function() {},
+  }
 }
 
 module.exports = Test
